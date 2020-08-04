@@ -52,6 +52,7 @@ jobs:
           - https://nuget.pkg.github.com/index.json                                # /index.json
           - https://nuget.pkg.github.com/                                          # no /index.json
           - https://github.com/${{ github.repository }}                            # repository url
+          - https://nuget.pkg.github.com/JCANSDALE-TEST/index.json                 # upper-case
         
       fail-fast: false
 
