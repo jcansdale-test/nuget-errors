@@ -217,4 +217,4 @@ jobs:
       run: dotnet pack --configuration Release -p:Version=${{ env.version }} -p:RepositoryUrl=${{ env.RepositoryUrl }}
 
     - name: Publish the package to GPR
-      run: dotnet nuget push bin/Release/*.nupkg --source ${{ env.source-url }} --api-key ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push bin/Release/*.nupkg --source ${{ env.source-url }} -k ${{ secrets.GITHUB_TOKEN }}
