@@ -5,6 +5,9 @@ name: CI
 on:
   push:
 
+env:
+  DOTNET_NOLOGO: true
+
 jobs:
   repository-urls:
     strategy:      
