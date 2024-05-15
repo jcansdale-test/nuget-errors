@@ -63,7 +63,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      version: 0.0.0-g${{ github.sha }}-${{ github.job }}-${{ strategy.job-index }}
+      version: 0.0.1-g${{ github.sha }}-${{ github.job }}-${{ strategy.job-index }}
 
     # Use example from https://github.com/actions/setup-dotnet
     steps:
