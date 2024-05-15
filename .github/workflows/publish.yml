@@ -40,7 +40,7 @@ jobs:
         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - name: Create the package ${{ matrix.options }}
-      run: dotnet pack --configuration Release -p:Version=0.0.1-g${{ github.sha }} -p:RepositoryUrl=${{ matrix.RepositoryUrl }}
+      run: dotnet pack --configuration Release -p:Version=0.0.${{ strategy.job-index }}-g${{ github.sha }} -p:RepositoryUrl=${{ matrix.RepositoryUrl }}
 
     - name: Publish the package to GPR
       run: dotnet nuget push bin/Release/*.nupkg
